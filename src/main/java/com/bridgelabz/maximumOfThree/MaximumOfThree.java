@@ -3,6 +3,7 @@ package com.bridgelabz.maximumOfThree;
 public class MaximumOfThree {
 
     public static int True = 1;
+
     public static Integer maxInteger(Integer firstNumber, Integer secondNumber, Integer thirdNumber) {
         Integer maxNumber = null;
         if (firstNumber.compareTo(secondNumber) == True && firstNumber.compareTo(thirdNumber) == True) {
@@ -27,5 +28,17 @@ public class MaximumOfThree {
         }
         return maxNumber;
     }
-}
 
+    // Method for finding maximum of three strings
+    public static String maxString(String firstString, String secondString, String thirdString) {
+        String maxString = null;
+        if (firstString.length() > secondString.length() && firstString.length() > thirdString.length()) {
+            maxString = firstString;
+        } else if (secondString.length() > firstString.length() && secondString.length() > thirdString.length()) {
+            maxString = secondString;
+        } else if (thirdString.length() > firstString.length() && thirdString.length() > secondString.length()) {
+            maxString = thirdString;
+        }
+        return maxString;
+    }
+}

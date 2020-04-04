@@ -44,4 +44,23 @@ public class MaximumOfThreeTest {
         Assert.assertEquals((Float)3.3f,thirdMaximum);
     }
 
+    // Test for if first string is max
+    @Test
+    public void givenInput_whenFirstStringIsMaximum_shouldReturnMaximum() {
+        String firstMaximum = maximumOfThreeObject.maxString("banana","apple","peach");
+        Assert.assertEquals("banana",firstMaximum);
+    }
+    // Test for if second string is max
+    @Test
+    public void givenInput_whenSecondStringIsMaximum_shouldReturnMaximum() {
+        String secondMaximum = maximumOfThreeObject.maxString("apple","banana","peach");
+        Assert.assertEquals("banana",secondMaximum);
+    }
+    // Test for if third string is max
+    @Test
+    public void givenInput_whenThirdStringIsMaximum_shouldReturnMaximum() {
+        String thirdMaximum = maximumOfThreeObject.maxString("apple","peach","banana");
+        Assert.assertEquals("banana",thirdMaximum);
+    }
+
 }
